@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Demo</title>
+
+  <style>
+    code {
+      line-height: 1.382;
+      font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+    }
+
+    body {
+      background: {{bg}};
+    }
+
+    .bold {
+      font-style: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .c0 {
+      color: {{c0}};
+    }
+
+    .c1 {
+      color: {{c1}};
+    }
+
+    .c2 {
+      color: {{c2}};
+    }
+
+    .c3 {
+      color: {{c3}};
+    }
+
+    .c4 {
+      color: {{c4}};
+    }
+  </style>
+</head>
+<body>
+  <pre>
+    <code class="c2">
+      import <span class="c1">String</span> from <span class="c1">‘./String.js’</span>
+
+      <span class="c3 italic">/*
+       * class CustomString
+       * Test class for theme demonstration.
+       */</span>
+      <span class="c1">class</span> <span class="c1">CustomString</span> <span class="c2">extends</span> <span class="c1">String</span> {
+        #contents
+
+        <span class="c1">constructor</span> (<span class="c1">string</span>) {
+          <span class="c1 italic">this</span>.#contents = <span class="c1">string</span>  
+        }
+
+        get <span class="c1">contents</span> () {
+          return <span class="c1 italic">this</span>.#contents
+        }
+
+        <span class="c1">validate</span> (<span class="c1">string</span>) {
+          <span class="c1">let</span> <span class="c1">valid</span> = <span class="c1 italic">true</span>
+
+          if (<span class="c1">string</span> === <span class="c3 italic">undefined</span> || <span class="c1">string</span> === <span class="c3 italic">null</span> || <span class="c1">string</span> !== <span class="c1 italic">this</span>.#contents) {
+            <span class="c1">valid</span> = <span class="c1 italic">false</span>
+            <span class="c1">console.log<span class="bold">(</span></span>`string “<span class="c1">${string}</span>” does not match “<span class="c1">${</span><span class="c1 italic">this</span>.#contents<span class="c1">}</span>”`<span class="c1 bold">)</span>
+          }
+
+          return <span class="c1">valid</span>
+        }
+      }
+    </code>
+  </pre>
+</body>
+</html>
